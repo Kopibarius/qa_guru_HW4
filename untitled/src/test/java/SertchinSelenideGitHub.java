@@ -1,0 +1,2 @@
+public class SertchinSelenideGitHub {
+}

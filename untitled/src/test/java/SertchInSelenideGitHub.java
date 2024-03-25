@@ -10,7 +10,8 @@ public class SertchInSelenideGitHub {
     void serchingJUnit5CodeInSoftAssertions() {
         open("https://github.com/selenide/selenide/tree/main");
         $("#wiki-tab").click();
-        $("#wiki-body").shouldHave(text("Soft assertions"));
+        $("#wiki-pages-filter").setValue("SoftAssertions");
+        $(".filterable-active").shouldHave(text("SoftAssertions"));
         $(By.linkText("Soft assertions")).click();
         $("#wiki-body").shouldHave(text("3. Using JUnit5 extend test class:"));
     }
